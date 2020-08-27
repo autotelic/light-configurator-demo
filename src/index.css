@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'neontubes';
+  src: url("./assets/fonts/neontubes/neontubes-webfont.eot");
+  src: url("./assets/fonts/neontubes/neontubes-webfont.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/neontubes/neontubes-webfont.woff2") format("woff2"), url("./assets/fonts/neontubes/neontubes-webfont.woff") format("woff"), url("./assets/fonts/neontubes/neontubes-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +18,125 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.main {
+  position: absolute;
+  left: 50%;
+  display: block;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 80%;
+  height: auto;
+  font-family: "neontubes";
+  font-size: 16vw;
+  text-align: center;
+  white-space: nowrap;
+}
+.control {
+  display: block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: 20%;
+}
+
+.control input {
+  font-size: 1vw;
+  margin-right: 1em;
+}
+
+.control select {
+  font-size: 1vw;
+  margin-right: 1em;
+}
+
+.main span {
+  display: block;
+  position: relative;
+  -webkit-transform: translateZ(0) translate3D(0, 0, 0);
+          transform: translateZ(0) translate3D(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  will-change: opacity;
+}
+
+.red {
+  color: #ffd9e2;
+  text-shadow: 0 0 0 transparent, 0 0 10px #ff003c, 0 0 20px rgba(255, 0, 60, 0.5), 0 0 40px #ff003c, 0 0 100px #ff003c, 0 0 200px #ff003c, 0 0 300px #ff003c, 0 0 500px #ff003c, 0 0 1000px #ff003c;
+}
+
+.blue {
+  color: #d4eaff;
+  text-shadow: 0 0 0 transparent, 0 0 10px #2695ff, 0 0 20px rgba(38, 149, 255, 0.5), 0 0 40px #2695ff, 0 0 100px #2695ff, 0 0 200px #2695ff, 0 0 300px #2695ff, 0 0 500px #2695ff;
+}
+
+.big {
+  font-size: 12vw;
+}
+
+.medium {
+  font-size: 10vw;
+}
+
+.small {
+  font-size: 8vw;
+}
+
+.quick {
+  -webkit-animation: buzz 0.01s infinite alternate;
+          animation: buzz 0.01s infinite alternate;
+}
+
+.slow {
+  -webkit-animation: blink 4s infinite alternate;
+          animation: blink 4s infinite alternate;
+}
+
+@-webkit-keyframes buzz {
+  70% {
+    opacity: 0.80;
+  }
+}
+
+@keyframes buzz {
+  70% {
+    opacity: 0.80;
+  }
+}
+@-webkit-keyframes blink {
+  40% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  43% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.2;
+  }
+  46% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  40% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  43% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.2;
+  }
+  46% {
+    opacity: 1;
+  }
 }
